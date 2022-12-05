@@ -6,10 +6,8 @@ struct UITabBarControllerWrapperView: UIViewControllerRepresentable {
 		let tabBarController = UITabBarController()
 		tabBarController.applyStyle()
 
-		let greenVC = UIViewController()
-		greenVC.view.backgroundColor = .green
-		greenVC.title = "Green"
-		let firstTabNav = UINavigationController(rootViewController: greenVC)
+		let problemVC = ProblemViewController()
+		let firstTabNav = UINavigationController(rootViewController: problemVC)
 		firstTabNav.applyStyle()
 		firstTabNav.tabBarItem.title = "Problem"
 
