@@ -13,6 +13,10 @@
 		0CFC98BB293E4B0000D138DE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CFC98BA293E4B0000D138DE /* Preview Assets.xcassets */; };
 		0CFC98C4293E4FEF00D138DE /* UITabBarControllerWrapperView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98C3293E4FEF00D138DE /* UITabBarControllerWrapperView.swift */; };
 		0CFC98C6293E57CE00D138DE /* ProblemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98C5293E57CE00D138DE /* ProblemViewController.swift */; };
+		0CFC98C9293E5ECF00D138DE /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 0CFC98C8293E5ECF00D138DE /* ComposableArchitecture */; };
+		0CFC98CB293E5EFD00D138DE /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CA293E5EFD00D138DE /* ProblemView.swift */; };
+		0CFC98CD293E60CF00D138DE /* OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */; };
+		0CFC98CF293E614400D138DE /* NotificationCenterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,9 @@
 		0CFC98BA293E4B0000D138DE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		0CFC98C3293E4FEF00D138DE /* UITabBarControllerWrapperView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarControllerWrapperView.swift; sourceTree = "<group>"; };
 		0CFC98C5293E57CE00D138DE /* ProblemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemViewController.swift; sourceTree = "<group>"; };
+		0CFC98CA293E5EFD00D138DE /* ProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
+		0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppear.swift; sourceTree = "<group>"; };
+		0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFC98C9293E5ECF00D138DE /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +68,10 @@
 				0CFC98B4293E4AFE00D138DE /* ContentView.swift */,
 				0CFC98B8293E4B0000D138DE /* LongLivingEffectCancellationDemo.entitlements */,
 				0CFC98B2293E4AFE00D138DE /* LongLivingEffectCancellationDemoApp.swift */,
+				0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */,
+				0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */,
 				0CFC98B9293E4B0000D138DE /* Preview Content */,
+				0CFC98CA293E5EFD00D138DE /* ProblemView.swift */,
 				0CFC98C5293E57CE00D138DE /* ProblemViewController.swift */,
 				0CFC98C3293E4FEF00D138DE /* UITabBarControllerWrapperView.swift */,
 			);
@@ -91,6 +102,9 @@
 			dependencies = (
 			);
 			name = LongLivingEffectCancellationDemo;
+			packageProductDependencies = (
+				0CFC98C8293E5ECF00D138DE /* ComposableArchitecture */,
+			);
 			productName = LongLivingEffectCancellationDemo;
 			productReference = 0CFC98AF293E4AFE00D138DE /* LongLivingEffectCancellationDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +133,9 @@
 				Base,
 			);
 			mainGroup = 0CFC98A6293E4AFE00D138DE;
+			packageReferences = (
+				0CFC98C7293E5ECF00D138DE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 0CFC98B0293E4AFE00D138DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -145,10 +162,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFC98CD293E60CF00D138DE /* OnFirstAppear.swift in Sources */,
 				0CFC98B5293E4AFE00D138DE /* ContentView.swift in Sources */,
 				0CFC98B3293E4AFE00D138DE /* LongLivingEffectCancellationDemoApp.swift in Sources */,
 				0CFC98C6293E57CE00D138DE /* ProblemViewController.swift in Sources */,
 				0CFC98C4293E4FEF00D138DE /* UITabBarControllerWrapperView.swift in Sources */,
+				0CFC98CB293E5EFD00D138DE /* ProblemView.swift in Sources */,
+				0CFC98CF293E614400D138DE /* NotificationCenterClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -362,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0CFC98C7293E5ECF00D138DE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = exactVersion;
+				version = 0.47.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0CFC98C8293E5ECF00D138DE /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0CFC98C7293E5ECF00D138DE /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0CFC98A7293E4AFE00D138DE /* Project object */;
 }

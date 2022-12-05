@@ -1,11 +1,19 @@
-import Foundation
+import ComposableArchitecture
+import SwiftUI
 import UIKit
 
+extension Notification.Name {
+	static let problem = Notification.Name("Problem")
+}
+
 class ProblemViewController: UIViewController {
+	private lazy var sendItem = UIBarButtonItem(title: "Send", image: UIImage(systemName: "paperplane.circle"), target: self, action: #selector(sendButtonTapped))
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		title = "Problem"
+		navigationItem.rightBarButtonItem = sendItem
 		view.backgroundColor = .systemGroupedBackground
 
 		let stackView = UIStackView()
@@ -13,7 +21,7 @@ class ProblemViewController: UIViewController {
 		stackView.axis = .vertical
 		stackView.distribution = .equalSpacing
 		stackView.alignment = .center
-		stackView.spacing = 12
+		stackView.spacing = 30
 
 		view.addSubview(stackView)
 		NSLayoutConstraint.activate([
@@ -24,17 +32,36 @@ class ProblemViewController: UIViewController {
 			stackView.widthAnchor.constraint(lessThanOrEqualToConstant: 300)
 		])
 
-		let label = UILabel()
-		label.text = "Instructions"
-		stackView.addArrangedSubview(label)
+		let firstLabel = UILabel()
+		firstLabel.textAlignment = .center
+		firstLabel.numberOfLines = 0
+		firstLabel.text = "Push the problem view using the button below. Use the send button in the navigation bar to send notifications."
+		stackView.addArrangedSubview(firstLabel)
 
 		let button = UIButton(type: .system)
 		button.setTitle("Push Problem View", for: .normal)
-		button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+		button.addTarget(self, action: #selector(pushButtonTapped), for: .touchUpInside)
 		stackView.addArrangedSubview(button)
+
+		let secondLabel = UILabel()
+		secondLabel.textAlignment = .center
+		secondLabel.numberOfLines = 0
+		secondLabel.text = "Notice messages continue to print in the console even after the problem view has been popped. If you push/pop multiple times, you will see one message for each push."
+		stackView.addArrangedSubview(secondLabel)
 	}
 
-	@objc private func buttonTapped() {
-		print("YUP!!!")
+	@objc private func pushButtonTapped() {
+		let store = StoreOf<Problem>(
+			initialState: .init(),
+			reducer: Problem()
+		)
+		let rootView = ProblemView(store: store)
+		let host = UIHostingController(rootView: rootView)
+
+		navigationController?.pushViewController(host, animated: true)
+	}
+
+	@objc private func sendButtonTapped() {
+		NotificationCenter.default.post(name: .problem, object: nil)
 	}
 }

@@ -62,14 +62,7 @@ extension UINavigationController {
 			NSAttributedString.Key.foregroundColor: UIColor.label,
 		]
 
-		let buttonAppearance = UIBarButtonItemAppearance()
-		buttonAppearance.normal.titleTextAttributes = [
-			.foregroundColor: UIColor.label
-		]
-		barAppearance.buttonAppearance = buttonAppearance
-
 		navigationBar.standardAppearance = barAppearance
 		navigationBar.scrollEdgeAppearance = barAppearance
-		navigationBar.tintColor = .label
 	}
 }
