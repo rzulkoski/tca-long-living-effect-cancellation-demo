@@ -10,13 +10,15 @@ struct UITabBarControllerWrapperView: UIViewControllerRepresentable {
 		let firstTabNav = UINavigationController(rootViewController: problemVC)
 		firstTabNav.applyStyle()
 		firstTabNav.tabBarItem.title = "Problem"
+		firstTabNav.tabBarItem.image = UIImage(systemName: "ladybug")
+		firstTabNav.tabBarItem.selectedImage = UIImage(systemName: "ladybug.fill")
 
-		let redVC = UIViewController()
-		redVC.view.backgroundColor = .red
-		redVC.title = "Red"
-		let secondTabNav = UINavigationController(rootViewController: redVC)
+		let workaroundVC = WorkaroundViewController()
+		let secondTabNav = UINavigationController(rootViewController: workaroundVC)
 		secondTabNav.applyStyle()
 		secondTabNav.tabBarItem.title = "Workaround"
+		secondTabNav.tabBarItem.image = UIImage(systemName: "bandage")
+		secondTabNav.tabBarItem.selectedImage = UIImage(systemName: "bandage.fill")
 
 		tabBarController.viewControllers = [firstTabNav, secondTabNav]
 

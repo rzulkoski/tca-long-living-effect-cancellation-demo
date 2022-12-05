@@ -17,6 +17,9 @@
 		0CFC98CB293E5EFD00D138DE /* ProblemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CA293E5EFD00D138DE /* ProblemView.swift */; };
 		0CFC98CD293E60CF00D138DE /* OnFirstAppear.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */; };
 		0CFC98CF293E614400D138DE /* NotificationCenterClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */; };
+		0CFC98D1293E680700D138DE /* WorkaroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D0293E680700D138DE /* WorkaroundViewController.swift */; };
+		0CFC98D3293E687B00D138DE /* WorkaroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D2293E687B00D138DE /* WorkaroundView.swift */; };
+		0CFC98D5293E691B00D138DE /* WorkaroundHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +34,9 @@
 		0CFC98CA293E5EFD00D138DE /* ProblemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProblemView.swift; sourceTree = "<group>"; };
 		0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppear.swift; sourceTree = "<group>"; };
 		0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCenterClient.swift; sourceTree = "<group>"; };
+		0CFC98D0293E680700D138DE /* WorkaroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundViewController.swift; sourceTree = "<group>"; };
+		0CFC98D2293E687B00D138DE /* WorkaroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundView.swift; sourceTree = "<group>"; };
+		0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundHostingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +80,9 @@
 				0CFC98CA293E5EFD00D138DE /* ProblemView.swift */,
 				0CFC98C5293E57CE00D138DE /* ProblemViewController.swift */,
 				0CFC98C3293E4FEF00D138DE /* UITabBarControllerWrapperView.swift */,
+				0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */,
+				0CFC98D2293E687B00D138DE /* WorkaroundView.swift */,
+				0CFC98D0293E680700D138DE /* WorkaroundViewController.swift */,
 			);
 			path = LongLivingEffectCancellationDemo;
 			sourceTree = "<group>";
@@ -162,10 +171,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CFC98D3293E687B00D138DE /* WorkaroundView.swift in Sources */,
 				0CFC98CD293E60CF00D138DE /* OnFirstAppear.swift in Sources */,
+				0CFC98D5293E691B00D138DE /* WorkaroundHostingController.swift in Sources */,
 				0CFC98B5293E4AFE00D138DE /* ContentView.swift in Sources */,
 				0CFC98B3293E4AFE00D138DE /* LongLivingEffectCancellationDemoApp.swift in Sources */,
 				0CFC98C6293E57CE00D138DE /* ProblemViewController.swift in Sources */,
+				0CFC98D1293E680700D138DE /* WorkaroundViewController.swift in Sources */,
 				0CFC98C4293E4FEF00D138DE /* UITabBarControllerWrapperView.swift in Sources */,
 				0CFC98CB293E5EFD00D138DE /* ProblemView.swift in Sources */,
 				0CFC98CF293E614400D138DE /* NotificationCenterClient.swift in Sources */,
