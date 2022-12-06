@@ -20,6 +20,9 @@
 		0CFC98D1293E680700D138DE /* WorkaroundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D0293E680700D138DE /* WorkaroundViewController.swift */; };
 		0CFC98D3293E687B00D138DE /* WorkaroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D2293E687B00D138DE /* WorkaroundView.swift */; };
 		0CFC98D5293E691B00D138DE /* WorkaroundHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */; };
+		0CFC98D7293FA23B00D138DE /* NotifyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D6293FA23B00D138DE /* NotifyViewController.swift */; };
+		0CFC98D9293FA46400D138DE /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98D8293FA46400D138DE /* TaskViewController.swift */; };
+		0CFC98DB293FA47100D138DE /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFC98DA293FA47100D138DE /* TaskView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,9 @@
 		0CFC98D0293E680700D138DE /* WorkaroundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundViewController.swift; sourceTree = "<group>"; };
 		0CFC98D2293E687B00D138DE /* WorkaroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundView.swift; sourceTree = "<group>"; };
 		0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkaroundHostingController.swift; sourceTree = "<group>"; };
+		0CFC98D6293FA23B00D138DE /* NotifyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotifyViewController.swift; sourceTree = "<group>"; };
+		0CFC98D8293FA46400D138DE /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		0CFC98DA293FA47100D138DE /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,10 +81,13 @@
 				0CFC98B8293E4B0000D138DE /* LongLivingEffectCancellationDemo.entitlements */,
 				0CFC98B2293E4AFE00D138DE /* LongLivingEffectCancellationDemoApp.swift */,
 				0CFC98CE293E614400D138DE /* NotificationCenterClient.swift */,
+				0CFC98D6293FA23B00D138DE /* NotifyViewController.swift */,
 				0CFC98CC293E60CF00D138DE /* OnFirstAppear.swift */,
 				0CFC98B9293E4B0000D138DE /* Preview Content */,
 				0CFC98CA293E5EFD00D138DE /* ProblemView.swift */,
 				0CFC98C5293E57CE00D138DE /* ProblemViewController.swift */,
+				0CFC98DA293FA47100D138DE /* TaskView.swift */,
+				0CFC98D8293FA46400D138DE /* TaskViewController.swift */,
 				0CFC98C3293E4FEF00D138DE /* UITabBarControllerWrapperView.swift */,
 				0CFC98D4293E691B00D138DE /* WorkaroundHostingController.swift */,
 				0CFC98D2293E687B00D138DE /* WorkaroundView.swift */,
@@ -176,6 +185,9 @@
 				0CFC98D5293E691B00D138DE /* WorkaroundHostingController.swift in Sources */,
 				0CFC98B5293E4AFE00D138DE /* ContentView.swift in Sources */,
 				0CFC98B3293E4AFE00D138DE /* LongLivingEffectCancellationDemoApp.swift in Sources */,
+				0CFC98D9293FA46400D138DE /* TaskViewController.swift in Sources */,
+				0CFC98D7293FA23B00D138DE /* NotifyViewController.swift in Sources */,
+				0CFC98DB293FA47100D138DE /* TaskView.swift in Sources */,
 				0CFC98C6293E57CE00D138DE /* ProblemViewController.swift in Sources */,
 				0CFC98D1293E680700D138DE /* WorkaroundViewController.swift in Sources */,
 				0CFC98C4293E4FEF00D138DE /* UITabBarControllerWrapperView.swift in Sources */,

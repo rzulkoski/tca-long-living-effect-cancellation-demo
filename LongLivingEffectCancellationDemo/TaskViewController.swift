@@ -2,13 +2,13 @@ import ComposableArchitecture
 import SwiftUI
 import UIKit
 
-class ProblemViewController: UIViewController {
+class TaskViewController: UIViewController {
 	private lazy var sendItem = UIBarButtonItem(title: "Send", image: UIImage(systemName: "paperplane.circle"), target: self, action: #selector(sendButtonTapped))
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
-		title = "Problem"
+		title = "Task"
 		navigationItem.rightBarButtonItem = sendItem
 		view.backgroundColor = .systemGroupedBackground
 
@@ -31,27 +31,27 @@ class ProblemViewController: UIViewController {
 		let firstLabel = UILabel()
 		firstLabel.textAlignment = .center
 		firstLabel.numberOfLines = 0
-		firstLabel.text = "Push the problem view using the button below. Use the send button in the navigation bar to send a notification observed by the problem view."
+		firstLabel.text = "Push the task view using the button below. Use the send button in the navigation bar to send a notification observed by the task view."
 		stackView.addArrangedSubview(firstLabel)
 
 		let button = UIButton(type: .system)
-		button.setTitle("Push Problem View", for: .normal)
+		button.setTitle("Push Task View", for: .normal)
 		button.addTarget(self, action: #selector(pushButtonTapped), for: .touchUpInside)
 		stackView.addArrangedSubview(button)
 
 		let secondLabel = UILabel()
 		secondLabel.textAlignment = .center
 		secondLabel.numberOfLines = 0
-		secondLabel.text = "Notice messages continue to print in the console even after the problem view has been popped. If you push/pop multiple times, you will see one message for each push."
+		secondLabel.text = "Notice messages do NOT continue to print in the console after the workaround view has been popped. However, message also do NOT print when on the notify tab."
 		stackView.addArrangedSubview(secondLabel)
 	}
 
 	@objc private func pushButtonTapped() {
-		let store = StoreOf<Problem>(
+		let store = StoreOf<Task>(
 			initialState: .init(),
-			reducer: Problem()
+			reducer: Task()
 		)
-		let rootView = ProblemView(store: store)
+		let rootView = TaskView(store: store)
 		let host = UIHostingController(rootView: rootView)
 
 		navigationController?.pushViewController(host, animated: true)

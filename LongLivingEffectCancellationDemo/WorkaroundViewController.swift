@@ -2,10 +2,6 @@ import ComposableArchitecture
 import SwiftUI
 import UIKit
 
-extension Notification.Name {
-	static let workaround = Notification.Name("Workaround")
-}
-
 class WorkaroundViewController: UIViewController {
 	private lazy var sendItem = UIBarButtonItem(title: "Send", image: UIImage(systemName: "paperplane.circle"), target: self, action: #selector(sendButtonTapped))
 
@@ -35,7 +31,7 @@ class WorkaroundViewController: UIViewController {
 		let firstLabel = UILabel()
 		firstLabel.textAlignment = .center
 		firstLabel.numberOfLines = 0
-		firstLabel.text = "Push the workaround view using the button below. Use the send button in the navigation bar to send notifications."
+		firstLabel.text = "Push the workaround view using the button below. Use the send button in the navigation bar to send a notification observed by the workaround view."
 		stackView.addArrangedSubview(firstLabel)
 
 		let button = UIButton(type: .system)
