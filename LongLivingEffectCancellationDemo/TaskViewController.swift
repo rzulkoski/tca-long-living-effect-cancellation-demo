@@ -58,6 +58,6 @@ class TaskViewController: UIViewController {
 	}
 
 	@objc private func sendButtonTapped() {
-		NotificationCenter.default.post(name: .problem, object: nil)
+		NotificationCenter.default.post(name: .task, object: nil)
 	}
 }
